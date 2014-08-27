@@ -1,1 +1,102 @@
-*{margin:0;padding:0;}body{color:#777;background:#FFFDFA;}h1{color:#3a3a3a;font-family:"Songti TC",STSongti-TC-Regular,serif;font-size:24px;color:#000000;line-height:33px;font-weight:normal;}p.slogan{font-family:"Heiti TC";font-size:13px;color:#8e8e8e;line-height:19px;}.container{width:768px;margin:0 auto;}.logo{margin-top:53px;}nav{position:absolute;top:15px;left:15px;}#hero{text-align:center;}
+/* Reset & General */
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  color: #777;
+  background: #FFFDFA; }
+
+h1 {
+  color: #3a3a3a;
+  font-family: "Songti TC",STSongti-TC-Regular, serif;
+  font-size: 24px;
+  color: #000000;
+  line-height: 33px;
+  font-weight: normal; }
+
+p.slogan {
+  font-family: "Heiti TC";
+  font-size: 13px;
+  color: #8e8e8e;
+  line-height: 20px; }
+
+/* Layout */
+.container {
+  width: 768px;
+  margin: 0 auto; }
+
+.logo {
+  margin-top: 53px; }
+
+nav {
+  position: absolute;
+  top: 15px;
+  left: 15px; }
+
+#hero {
+  text-align: center; }
+  #hero h1 {
+    margin-top: 20px;
+    margin-bottom: 36px; }
+  #hero .slogan {
+    width: 270px;
+    margin: 0 auto; }
+  #hero hr {
+    width: 230px;
+    height: 1px;
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
+    margin: 12px auto; }
+
+#people {
+  margin: 50px auto 67px auto;
+  text-align: center;
+  width: 380px; }
+  #people dt {
+    display: none; }
+  #people dl {
+    width: 24px;
+    display: inline-block;
+    padding: 0 5px 4px 5px; }
+    #people dl img {
+      border-radius: 100px;
+      width: 100%; }
+
+#products {
+  margin-bottom: 100px;
+  padding-left: 15px;
+  width: 726px; }
+  #products .item {
+    position: relative;
+    transition: all 0.8s ease-in;
+    width: 222px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    display: inline-block; }
+    #products .item:hover {
+      -webkit-transform: scale(1.1);
+      transition: all 0.2s ease-out; }
+      #products .item:hover img.avatar {
+        transition: all 0.2s ease-in;
+        opacity: 1;
+        -webkit-transform: scale(1);
+        border: 2px solid white; }
+    #products .item.intro {
+      display: none; }
+    #products .item img.avatar {
+      box-shadow: 0 1px rgba(0, 0, 0, 0.2);
+      border: 0px solid white;
+      transition: all 0.2s ease-in;
+      border-radius: 100px;
+      position: absolute;
+      z-index: 1;
+      top: 174px;
+      right: 10px;
+      width: 34px;
+      height: 34px;
+      opacity: 0;
+      -webkit-transform: scale(0.8); }
+    #products .item img {
+      border-radius: 5px;
+      width: 100%; }

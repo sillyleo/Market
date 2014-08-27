@@ -24,7 +24,7 @@ p {
 		font-family: "Heiti TC";
 		font-size: 13px;
 		color: #8e8e8e;
-		line-height: 19px;
+		line-height: 20px;
 	}
 }
 
@@ -48,6 +48,84 @@ nav {
 #hero {
 	text-align: center;
 	h1 {
-		
+		margin-top: 20px;
+		margin-bottom: 36px;
+	}
+	.slogan {
+		width: 270px;
+		margin: 0 auto;
+	}
+	hr {
+		width: 230px;
+		height: 1px;
+		border: none;
+		background: rgba(0,0,0,0.2);
+		margin: 12px auto;
+	}
+}
+
+#people {
+	margin: 50px auto 67px auto;
+	text-align: center;
+	width: 380px;
+	dt {
+		display: none;
+	}
+	dl {
+		width: 24px;
+		display: inline-block;
+		padding: 0 5px 4px 5px;
+		img {
+			border-radius: 100px;
+			width: 100%;
+		}
+	}
+}
+
+$gutter-size: 15px;
+$item-size: 222px;
+
+#products {
+	margin-bottom: 100px;
+	padding-left: $gutter-size;
+	width: ($gutter-size * 4) + ($item-size * 3);
+	.item {
+		position: relative;
+		transition: all 0.8s ease-in;
+		&:hover {
+			-webkit-transform: scale(1.1);
+			transition: all 0.2s ease-out;
+			img.avatar {
+				transition: all 0.2s ease-in;
+				opacity: 1;
+				-webkit-transform: scale(1);
+				border: 2px solid white;
+			}
+		}
+		&.intro {
+			display: none;
+		}
+		width: $item-size;
+		margin-right: $gutter-size;
+		margin-bottom:  $gutter-size * 2;
+		display: inline-block;
+		img.avatar {
+			box-shadow: 0 1px rgba(0,0,0,0.2);
+			border: 0px solid white;
+			transition: all 0.2s ease-in;
+			border-radius: 100px;
+			position: absolute;
+			z-index: 1;
+			top: $item-size - 10px - 38px;
+			right: 10px;
+			width: 34px;
+			height: 34px;
+			opacity: 0;
+			-webkit-transform: scale(0.8);
+		}
+		img {
+			border-radius: 5px;
+			width: 100%;
+		}
 	}
 }
