@@ -110,9 +110,9 @@ $item-size: 222px;
 
 #products {
 	margin-bottom: 100px;
-	padding-left: $gutter-size;
 	width: ($gutter-size * 4) + ($item-size * 3);
 	.item {
+		height: auto;
 		position: relative;
 		transition: all 0.3s ease-in;
 		&:hover {
@@ -126,10 +126,14 @@ $item-size: 222px;
 			}
 		}
 		&.intro {
-			display: none;
+			h3 {
+				font-size: 12px;
+				color: #1A1919;
+				line-height: 19px;
+				font-weight: bold;
+			}
 		}
 		width: $item-size;
-		margin-right: $gutter-size;
 		margin-bottom:  $gutter-size * 2;
 		display: inline-block;
 		img.avatar {
