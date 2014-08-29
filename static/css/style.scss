@@ -9,7 +9,7 @@
 
 body {
 	color: #777;
-	background: #FFFDFA;
+	background: darken(#FFFDFA, 1%);
 	font-family: sans-serif;
 }
 
@@ -136,7 +136,10 @@ $item-size: 222px;
 		}
 		&.intro {
 			box-sizing: border-box;
-			padding: 0 15px;
+			padding: 15px 15px 5px 15px;
+			border-radius: 5px;
+			background: white;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 			.highlight {
 				color: #E7584B;
 				font-weight: bold;
