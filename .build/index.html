@@ -1,32 +1,18 @@
 <!doctype html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width">
-
-	<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="/static/js/main.js"></script>
-	<script src="/static/js/masonry.pkgd.min.js"></script>
-	<script src="/static/js/imagesloaded.pkgd.min.js"></script>
-	<script>
-		var container = document.querySelector('#products');
-		var msnry;
-		// initialize Masonry after all images have loaded
-		imagesLoaded( container, function() {
-		  msnry = new Masonry( container , {
-		  	itemSelector: '.item',
-		  	gutter: 15
-		  });
-		});
-	</script>
-
-	<link rel="stylesheet" href="/static/css/style.css">
-
-	<title>Solda Market Place</title>
-</head>
-<body>
-	
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width">
+		<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="/static/js/main.js"></script>
+		<script src="/static/js/masonry.pkgd.min.js"></script>
+		<script src="/static/js/imagesloaded.pkgd.min.js"></script>
+		<link rel="stylesheet" href="/static/css/style.css">
+		<title>Solda Market Place</title>
+	</head>
+	<body>
+		
 
 <nav>
 	<a href="http://solda.io" class="about"><span>Powered by </span>Solda</a>
@@ -253,5 +239,17 @@
 </div>
 
 
-</body>
+		<script>
+		$( document ).ready(function() {
+			var container = document.querySelector('#products');
+			imagesLoaded( container, function() {
+				var msnry = new Masonry( container, {
+				itemSelector: '.item',
+				gutter: 15,
+				"stamp": ".intro"
+				});
+			});
+		});
+		</script>
+	</body>
 </html>
