@@ -1,1 +1,6 @@
-{"port":8857}
+{
+    "aws-access-key": "AKIAJR2LALCXGURYPHTA",
+    "aws-bucket-name": "solda-market",
+    "aws-bucket-website": "solda-market.s3-website-us-east-1.amazonaws.com",
+    "port": 8857
+}

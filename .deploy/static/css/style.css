@@ -99,10 +99,6 @@ nav {
     width: 222px;
     margin-bottom: 30px;
     display: inline-block; }
-    #products .item.big {
-      background: green;
-      width: 300px;
-      height: 400px; }
     #products .item:hover {
       transition: all 0.3s ease-out;
       -webkit-transform: scale(1.05); }

@@ -121,6 +121,11 @@ $item-size: 222px;
 		 top: 0;
 	}
 	.item {
+		&.big {
+			background: green;
+			width:  300px;
+			height: 400px;
+		}
 		height: auto;
 		position: relative;
 		transition: all 0.3s ease-in;
@@ -135,6 +140,15 @@ $item-size: 222px;
 			}
 		}
 		&.intro {
+			// .fade-wrapper {
+			// 	height: 263px;
+			// 	overflow: hidden;
+			// 	&:hover {
+			// 		overflow: auto;
+			// 		height: auto;
+			// 		background: red;
+			// 	}
+			// }
 			box-sizing: border-box;
 			padding: 15px 15px 5px 15px;
 			border-radius: 5px;
