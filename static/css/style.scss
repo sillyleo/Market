@@ -105,7 +105,7 @@ nav {
 	}
 }
 
-$gutter-size: 15px;
+$gutter-size: 10px;
 $item-size: 222px;
 
 #products {
@@ -113,47 +113,28 @@ $item-size: 222px;
 	margin-right: auto;
 	margin-left: auto;
 	position: relative;
-	left:  $gutter-size / 2 - 0.5;
-	width: ($gutter-size * 3) + ($item-size * 3);
-	.intro {
-		 position: absolute;
-		 right: 15px;
-		 top: 0;
+	left:  0 - $gutter-size;
+	width: ($gutter-size * 4) + ($item-size * 3) - 1px;
+	.intro.full {
+		float: left;
+		width: ($item-size * 3) + (15px * 2);
+		margin-bottom:  $gutter-size * 2;
+		box-sizing: border-box;
 	}
-	.item {
-		&.big {
-			background: green;
-			width:  300px;
-			height: 400px;
-		}
-		height: auto;
-		position: relative;
-		transition: all 0.3s ease-in;
-		&:hover {
-			transition: all 0.3s ease-out;
-			-webkit-transform: scale(1.05);
-			img.avatar {
-				transition: all 0.3s ease-out;
-				opacity: 1;
-				-webkit-transform: scale(1);
-				border: 2px solid white;
-			}
-		}
-		&.intro {
-			// .fade-wrapper {
-			// 	height: 263px;
-			// 	overflow: hidden;
-			// 	&:hover {
-			// 		overflow: auto;
-			// 		height: auto;
-			// 		background: red;
-			// 	}
-			// }
-			box-sizing: border-box;
-			padding: 15px 15px 5px 15px;
-			border-radius: 5px;
+	.intro {
+		@extend .item;
+		overflow: visible;
+		float: right;
+		cursor: pointer;
+		.fade-wrapper {
+			margin-bottom: 10px;
 			background: white;
+			border-radius: 5px;
 			box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+			box-sizing: border-box;
+			max-height: 222px;
+			overflow-y: scroll;
+			padding: 15px 15px 5px 15px;
 			.highlight {
 				color: #E7584B;
 				font-weight: bold;
@@ -172,9 +153,28 @@ $item-size: 222px;
 			 	text-overflow: auto;
 			}
 		}
+		margin-left: $gutter-size;
+	}
+
+	.item {
+		position: relative;
+		height: 263px;
+		overflow-y: hidden;
+		transition: all 0.3s ease-in;
+		&:hover {
+			transition: all 0.3s ease-out;
+/* 			-webkit-transform: scale(1.05); */
+			img.avatar {
+				transition: all 0.3s ease-out;
+				opacity: 1;
+				-webkit-transform: scale(1);
+				border: 2px solid white;
+			}
+		}
 		width: $item-size;
-		margin-bottom:  $gutter-size * 2;
+		margin-bottom: $gutter-size * 2;
 		display: inline-block;
+		margin-left: $gutter-size;
 		img.avatar {
 			box-shadow: 0 1px rgba(0,0,0,0.2);
 			border: 0px solid white;

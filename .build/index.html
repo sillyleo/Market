@@ -5,9 +5,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width">
 		<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script src="/static/js/main.js"></script>
-		<script src="/static/js/masonry.pkgd.min.js"></script>
-		<script src="/static/js/imagesloaded.pkgd.min.js"></script>
 		<link rel="stylesheet" href="/static/css/style.css">
 		<title>Solda Market Place</title>
 	</head>
@@ -108,7 +105,7 @@
 	</div>
 	
 	<div id="products">
-		<div class="item intro">
+		<div class="intro">
 			<div class="fade-wrapper">
 				<h3>新消息</h3>
 				<p><strong class="highlight">2014/8/6</strong> 就這單純的呼吸已是無窮的愉快；空氣總是明淨的，但你應得帶書，是怨，在這道上遭受的...</p>
@@ -116,6 +113,11 @@
 				<p>華山藝文中心 B 區展演室 #211 <br />週一到週六 3 PM - 11 <br />週日不開放<br /> 2014/9/1 - 2014/9/9</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed rerum dignissimos consectetur similique commodi quisquam alias, nam molestiae error non. Odio suscipit neque, itaque praesentium quia alias quos reprehenderit officia.</p>
 			</div>
+			<p>
+				關於此市集
+				<span class="price">點擊看詳細資訊</span>
+			</p>
+
 		</div>
 		<div class="item">
 			<a href="#">
@@ -244,13 +246,8 @@
 
 		<script>
 		$( document ).ready(function() {
-			var container = document.querySelector('#products');
-			imagesLoaded( container, function() {
-				var msnry = new Masonry( container, {
-				itemSelector: '.item',
-				gutter: 15,
-				"stamp": ".intro"
-				});
+			$( ".intro" ).click(function() {
+			  $( this ).toggleClass( "full" );
 			});
 		});
 		</script>

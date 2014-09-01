@@ -86,52 +86,59 @@ nav {
   margin-right: auto;
   margin-left: auto;
   position: relative;
-  left: 7px;
-  width: 711px; }
+  left: -10px;
+  width: 705px; }
+  #products .intro.full {
+    float: left;
+    width: 696px;
+    margin-bottom: 20px;
+    box-sizing: border-box; }
   #products .intro {
-    position: absolute;
-    right: 15px;
-    top: 0; }
-  #products .item {
-    height: auto;
-    position: relative;
-    transition: all 0.3s ease-in;
-    width: 222px;
-    margin-bottom: 30px;
-    display: inline-block; }
-    #products .item.big {
-      background: green;
-      width: 300px;
-      height: 400px; }
-    #products .item:hover {
-      transition: all 0.3s ease-out;
-      -webkit-transform: scale(1.05); }
-      #products .item:hover img.avatar {
-        transition: all 0.3s ease-out;
-        opacity: 1;
-        -webkit-transform: scale(1);
-        border: 2px solid white; }
-    #products .item.intro {
-      box-sizing: border-box;
-      padding: 15px 15px 5px 15px;
-      border-radius: 5px;
+    overflow: visible;
+    float: right;
+    cursor: pointer;
+    margin-left: 10px; }
+    #products .intro .fade-wrapper {
+      margin-bottom: 10px;
       background: white;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
-      #products .item.intro .highlight {
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+      max-height: 222px;
+      overflow-y: scroll;
+      padding: 15px 15px 5px 15px; }
+      #products .intro .fade-wrapper .highlight {
         color: #E7584B;
         font-weight: bold; }
-      #products .item.intro h3 {
+      #products .intro .fade-wrapper h3 {
         font-size: 12px;
         color: #1A1919;
         line-height: 19px;
         font-weight: bold; }
-      #products .item.intro p {
+      #products .intro .fade-wrapper p {
         color: #a6a6a6;
         margin-bottom: 13px;
         white-space: normal;
         overflow: auto;
         text-overflow: auto; }
-    #products .item img.avatar {
+  #products .item, #products .intro {
+    position: relative;
+    height: 263px;
+    overflow-y: hidden;
+    transition: all 0.3s ease-in;
+    width: 222px;
+    margin-bottom: 20px;
+    display: inline-block;
+    margin-left: 10px; }
+    #products .item:hover, #products .intro:hover {
+      transition: all 0.3s ease-out;
+      /* 			-webkit-transform: scale(1.05); */ }
+      #products .item:hover img.avatar, #products .intro:hover img.avatar {
+        transition: all 0.3s ease-out;
+        opacity: 1;
+        -webkit-transform: scale(1);
+        border: 2px solid white; }
+    #products .item img.avatar, #products .intro img.avatar {
       box-shadow: 0 1px rgba(0, 0, 0, 0.2);
       border: 0px solid white;
       transition: all 0.2s ease-in;
@@ -144,10 +151,10 @@ nav {
       height: 34px;
       opacity: 0;
       -webkit-transform: scale(0.2); }
-    #products .item img {
+    #products .item img, #products .intro img {
       border-radius: 5px;
       width: 100%; }
-    #products .item p {
+    #products .item p, #products .intro p {
       margin-top: 5px;
       width: 100%;
       white-space: nowrap;
@@ -157,7 +164,7 @@ nav {
       font-size: 12px;
       color: #000000;
       line-height: 19px; }
-      #products .item p span {
+      #products .item p span, #products .intro p span {
         font-size: 11px;
         color: #B3ABA5;
         line-height: 13px;
