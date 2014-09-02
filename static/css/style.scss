@@ -7,16 +7,22 @@
 	text-decoration: none;
 }
 
+a, img, a img {
+	outline: none;
+}
+img {border : 0;}
+
+
 body {
 	color: #777;
 	background: darken(#FFFDFA, 1%);
-	font-family: sans-serif;
+	font-family: Helvetica, sans-serif;
 }
 
 h1 {
 	color: #3a3a3a;
-	font-family: "Songti TC",STSongti-TC-Regular, serif;
-	font-size: 24px;
+	font-family: "Songti TC", STSongti-TC-Regular, serif;
+	font-size: 28px;
 	color: #000000;
 	line-height: 33px;
 	font-weight: normal;
@@ -24,7 +30,7 @@ h1 {
 
 p {
 	&.slogan {
-		font-family: "Heiti TC";
+		font-family: Helvetica, "Heiti TC";
 		font-size: 13px;
 		color: #8e8e8e;
 		line-height: 20px;
@@ -117,22 +123,36 @@ $item-size: 222px;
 	width: ($gutter-size * 4) + ($item-size * 3) - 1px;
 	.intro.full {
 		float: left;
+		height: auto;
 		width: ($item-size * 3) + (15px * 2);
 		margin-bottom:  $gutter-size * 2;
 		box-sizing: border-box;
+		.fade-wrapper {
+			height: auto;
+			max-height: auto;
+			h3 {
+				font-size: 16px;
+				margin-top: 5px;
+				margin-bottom: 10px;
+			}
+		}
 	}
 	.intro {
 		@extend .item;
+		transition: none;
 		overflow: visible;
 		float: right;
 		cursor: pointer;
 		.fade-wrapper {
+			a {
+				color: #E7584B;
+			}
 			margin-bottom: 10px;
 			background: white;
 			border-radius: 5px;
 			box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 			box-sizing: border-box;
-			max-height: 222px;
+			height: 222px;
 			overflow-y: scroll;
 			padding: 15px 15px 5px 15px;
 			.highlight {
@@ -140,13 +160,13 @@ $item-size: 222px;
 				font-weight: bold;
 			}
 			h3 {
-				font-size: 12px;
+				font-size: 14px;
 				color: #1A1919;
 				line-height: 19px;
 				font-weight: bold;
 			}
 			p {
-				color: #a6a6a6;
+				color: lighten(#272822,30%);
 				margin-bottom: 13px;
 			 	white-space: normal;
 			 	overflow: auto;
@@ -159,11 +179,7 @@ $item-size: 222px;
 	.item {
 		position: relative;
 		height: 263px;
-		overflow-y: hidden;
-		transition: all 0.3s ease-in;
 		&:hover {
-			transition: all 0.3s ease-out;
-/* 			-webkit-transform: scale(1.05); */
 			img.avatar {
 				transition: all 0.3s ease-out;
 				opacity: 1;

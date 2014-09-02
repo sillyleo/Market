@@ -5,21 +5,27 @@
   outline: none;
   text-decoration: none; }
 
+a, img, a img {
+  outline: none; }
+
+img {
+  border: 0; }
+
 body {
   color: #777;
   background: #fffbf5;
-  font-family: sans-serif; }
+  font-family: Helvetica, sans-serif; }
 
 h1 {
   color: #3a3a3a;
-  font-family: "Songti TC",STSongti-TC-Regular, serif;
-  font-size: 24px;
+  font-family: "Songti TC", STSongti-TC-Regular, serif;
+  font-size: 28px;
   color: #000000;
   line-height: 33px;
   font-weight: normal; }
 
 p.slogan {
-  font-family: "Heiti TC";
+  font-family: Helvetica, "Heiti TC";
   font-size: 13px;
   color: #8e8e8e;
   line-height: 20px; }
@@ -86,48 +92,65 @@ nav {
   margin-right: auto;
   margin-left: auto;
   position: relative;
-  left: 7px;
-  width: 711px; }
-  #products .intro {
-    position: absolute;
-    right: 15px;
-    top: 0; }
-  #products .item {
+  left: -10px;
+  width: 705px; }
+  #products .intro.full {
+    float: left;
     height: auto;
-    position: relative;
-    transition: all 0.3s ease-in;
-    width: 222px;
-    margin-bottom: 30px;
-    display: inline-block; }
-    #products .item:hover {
-      transition: all 0.3s ease-out;
-      -webkit-transform: scale(1.05); }
-      #products .item:hover img.avatar {
-        transition: all 0.3s ease-out;
-        opacity: 1;
-        -webkit-transform: scale(1);
-        border: 2px solid white; }
-    #products .item.intro {
-      box-sizing: border-box;
-      padding: 15px 15px 5px 15px;
-      border-radius: 5px;
+    width: 696px;
+    margin-bottom: 20px;
+    box-sizing: border-box; }
+    #products .intro.full .fade-wrapper {
+      height: auto;
+      max-height: auto; }
+      #products .intro.full .fade-wrapper h3 {
+        font-size: 16px;
+        margin-top: 5px;
+        margin-bottom: 10px; }
+  #products .intro {
+    transition: none;
+    overflow: visible;
+    float: right;
+    cursor: pointer;
+    margin-left: 10px; }
+    #products .intro .fade-wrapper {
+      margin-bottom: 10px;
       background: white;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
-      #products .item.intro .highlight {
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+      height: 222px;
+      overflow-y: scroll;
+      padding: 15px 15px 5px 15px; }
+      #products .intro .fade-wrapper a {
+        color: #E7584B; }
+      #products .intro .fade-wrapper .highlight {
         color: #E7584B;
         font-weight: bold; }
-      #products .item.intro h3 {
-        font-size: 12px;
+      #products .intro .fade-wrapper h3 {
+        font-size: 14px;
         color: #1A1919;
         line-height: 19px;
         font-weight: bold; }
-      #products .item.intro p {
-        color: #a6a6a6;
+      #products .intro .fade-wrapper p {
+        color: #787b68;
         margin-bottom: 13px;
         white-space: normal;
         overflow: auto;
         text-overflow: auto; }
-    #products .item img.avatar {
+  #products .item, #products .intro {
+    position: relative;
+    height: 263px;
+    width: 222px;
+    margin-bottom: 20px;
+    display: inline-block;
+    margin-left: 10px; }
+    #products .item:hover img.avatar, #products .intro:hover img.avatar {
+      transition: all 0.3s ease-out;
+      opacity: 1;
+      -webkit-transform: scale(1);
+      border: 2px solid white; }
+    #products .item img.avatar, #products .intro img.avatar {
       box-shadow: 0 1px rgba(0, 0, 0, 0.2);
       border: 0px solid white;
       transition: all 0.2s ease-in;
@@ -140,10 +163,10 @@ nav {
       height: 34px;
       opacity: 0;
       -webkit-transform: scale(0.2); }
-    #products .item img {
+    #products .item img, #products .intro img {
       border-radius: 5px;
       width: 100%; }
-    #products .item p {
+    #products .item p, #products .intro p {
       margin-top: 5px;
       width: 100%;
       white-space: nowrap;
@@ -153,7 +176,7 @@ nav {
       font-size: 12px;
       color: #000000;
       line-height: 19px; }
-      #products .item p span {
+      #products .item p span, #products .intro p span {
         font-size: 11px;
         color: #B3ABA5;
         line-height: 13px;
