@@ -85,7 +85,8 @@ nav {
     padding: 0 5px 4px 5px; }
     #people dl img {
       border-radius: 100px;
-      width: 100%; }
+      width: 100%;
+      height: 100%; }
 
 #products {
   margin-bottom: 100px;
